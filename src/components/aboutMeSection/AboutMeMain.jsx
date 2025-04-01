@@ -2,29 +2,36 @@ import AboutMeImage from "./AboutMeImage";
 import AboutMeText from "./AboutMeText";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
+
 const AboutMeMain = () => {
   return (
-    <div
-      id="about"
-      className="flex md:flex-row sm:flex-col gap-12 px-4 max-w-[1200px] mx-auto mt-[100px] justify-between items-center"
-    >
-      <motion.div
-        variants={fadeIn("right", 0)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.7 }}
-      >
-        <AboutMeText />
-      </motion.div>
-      <motion.div
-        variants={fadeIn("left", 0)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.7 }}
-      >
-        <AboutMeImage />
-      </motion.div>
-    </div>
+    <section id="about" className="py-16 px-6 sm:px-12 lg:px-20 bg-gray-900">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row gap-12 items-center">
+          {/* About Me Text */}
+          <motion.div
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
+            className="flex-1 text-white"
+          >
+            <AboutMeText />
+          </motion.div>
+
+          {/* About Me Image */}
+          <motion.div
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
+            className="flex-1 flex justify-center"
+          >
+            <AboutMeImage />
+          </motion.div>
+        </div>
+      </div>
+    </section>
   );
 };
 

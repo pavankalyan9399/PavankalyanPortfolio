@@ -1,64 +1,88 @@
-import ProjectsText from "./ProjectsText";
-import SingleProject from "./SingleProject";
+import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
+import "../../App.css";
 
 const projects = [
   {
-    name: "Vacation of Africa",
-    year: "Mar2022",
-    align: "right",
-    image: "../../public/images/website-img-1.jpg",
-    link: "#",
+    title: "Movie Recommendation System",
+    description:
+      "A cutting-edge movie recommendation engine harnessing machine learning techniques to analyze preference data from over 5,000 users in real time while ensuring security through authentication processes.",
+    tags: ["MongoDB", "Express", "React", "JavaScript", "HTML/CSS"],
+    github: "#",
+    liveDemo: "#",
+    image: "/images/movie-recommendation.png",
   },
   {
-    name: "Moola App",
-    year: "Sept2022",
-    align: "left",
-    image: "../../public/images/website-img-2.webp",
-    link: "#",
+    title: "Stock Management System",
+    description:
+      "Engineered a Stock Management System that streamlined inventory tracking, featuring user role management and an intuitive responsive interface, improving efficiency by reducing item retrieval time by 30%.",
+    tags: ["Java", "JSP", "Servlets", "JBoss", "MySQL", "JDBC", "HTML/CSS", "JavaScript"],
+    github: "#",
+    liveDemo: "#",
+    image: "/images/stock-management.jpg",
   },
   {
-    name: "Tourzania",
-    year: "Jan2023",
-    align: "right",
-    image: "../../public/images/website-img-3.jpg",
-    link: "#",
+    title: "Event Management System",
+    description:
+      "Developed a mobile event management application featuring user authentication and real-time updates, resulting in an increase of 1,000 active users within the first month after launch.",
+    tags: ["React Native", "Python", "Django", "JavaScript", "HTML/CSS"],
+    github: "#",
+    liveDemo: "#",
+    image: "/images/event-management.jpg",
   },
   {
-    name: "Bank of Luck",
-    year: "May2024",
-    align: "left",
-    image: "../../public/images/website-img-4.jpg",
-    link: "#",
+    title: "Feature Extraction from Images",
+    description:
+      "Architected an advanced feature extraction algorithm leveraging TensorFlow and Python on a dataset of more than 100,000 images; this initiative enhanced model accuracy by achieving notable performance improvements.",
+    tags: ["TensorFlow", "Python", "Feature Engineering", "AI", "Image Processing", "Computer Vision"],
+    github: "#",
+    liveDemo: "#",
+    image: "/images/feature-extraction.jpg",
+  },
+  {
+    title: "AgriValue: Empowering Rural Entrepreneurship through Agriculture",
+    description:
+      "Developed a full-stack application supporting farmers, enhancing value-added products, and promoting rural entrepreneurship; facilitated improved agricultural practices that increased profitability for over 200 local farms.",
+    tags: ["Spring Boot", "Java", "Hibernate", "MySQL", "HTML/CSS", "JavaScript"],
+    github: "#",
+    liveDemo: "#",
+    image: "/images/agrivalue.jpg",
   },
 ];
 
 const ProjectsMain = () => {
   return (
-    <div id="projects" className="max-w-[1200px] mx-auto px-4">
-      <motion.div
-        variants={fadeIn("top", 0)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.7 }}
-      >
-        <ProjectsText />
-      </motion.div>
-      <div className="flex flex-col gap-20 max-w-[900px] mx-auto mt-12">
-        {projects.map((project, index) => {
-          return (
-            <SingleProject
+    <section id="projects" className="py-16 px-6 sm:px-8 lg:px-10 bg-gray-900 text-white">
+      <div className="projects-section">
+        <h2 className="section-title">My Projects</h2>
+        <p className="section-subtitle">
+          Explore my journey through projects. Each project represents a
+          milestone in my continuous learning path.
+        </p>
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <motion.div
               key={index}
-              name={project.name}
-              year={project.year}
-              align={project.align}
-              image={project.image}
-            />
-          );
-        })}
+              className="project-card"
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <img src={project.image} alt={project.title} className="project-image" />
+              <h3 className="project-title">{project.title}</h3>
+              <p className="project-description">{project.description}</p>
+              <div className="project-tags">
+                {project.tags.map((tag, i) => (
+                  <span key={i} className="project-tag">{tag}</span>
+                ))}
+              </div>
+              
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

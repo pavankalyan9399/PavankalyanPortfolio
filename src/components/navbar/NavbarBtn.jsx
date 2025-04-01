@@ -3,8 +3,8 @@ import { LuArrowDownRight } from "react-icons/lu";
 
 const NavbarBtn = () => {
   return (
-    <button className=" px-4 py-2 rounded-full text-xl font-bold font-body text-white border-cyan border flex items-center gap-1 bg-gradient-to-r  from-darkCyan to-orange transition-all duration-500 hover:scale-110 hover:border-orange cursor-pointer hover:shadow-cyanShadow">
-      <Link spy={true} smooth={true} duration={500} offset={-120} to="contact">
+<button className="px-4 py-2 rounded-full text-xl font-bold font-body text-white border-purple-500 border flex items-center gap-1 bg-gradient-to-r from-purple-600 to-pink-500 transition-all duration-500 hover:scale-110 hover:border-pink-500 cursor-pointer hover:shadow-purple-500/50">
+<Link spy={true} smooth={true} duration={500} offset={-120} to="contact">
         Hire Me
       </Link>
       <div className="sm:hidden md:block">
