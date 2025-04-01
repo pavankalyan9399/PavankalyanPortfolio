@@ -48,6 +48,15 @@ const projects = [
     liveDemo: "#",
     image: "/images/agrivalue.jpg",
   },
+  {
+    title: "Dynamic Pricing Optimization for Retail with Cloud AI",
+    description:
+      "Designed an AI-powered pricing optimization system leveraging cloud computing to dynamically adjust product prices based on demand, competitor pricing, and historical sales data, increasing revenue by 15%.",
+    tags: ["Cloud AI", "Machine Learning", "Python", "Big Data", "Retail Analytics"],
+    github: "#",
+    liveDemo: "#",
+    image: "/images/dynamic-pricing.png",
+  },
 ];
 
 const ProjectsMain = () => {
