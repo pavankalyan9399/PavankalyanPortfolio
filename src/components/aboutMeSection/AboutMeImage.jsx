@@ -4,10 +4,10 @@ import { fadeIn } from "../../framerMotion/variants";
 const AboutMeImage = () => {
   return (
     <motion.div
-      variants={fadeIn("left", 0.2)}
+      variants={fadeIn("left", 0.8)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.7 }}
+      viewport={{ once: true, amount: 0.7 }}
       className="relative flex justify-center"
     >
       {/* Image Container */}

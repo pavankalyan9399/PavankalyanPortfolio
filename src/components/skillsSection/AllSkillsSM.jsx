@@ -53,7 +53,7 @@ const AllSkillsSM = () => {
             variants={fadeIn("up", 0.2)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.7 }}
+            viewport={{ once: true, amount: 0.7 }}
             key={index}
             className="flex flex-col items-center"
           >

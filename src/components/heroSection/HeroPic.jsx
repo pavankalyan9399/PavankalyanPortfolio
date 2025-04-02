@@ -7,7 +7,7 @@ const HeroPic = () => {
       variants={fadeIn("left", 0.2)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0 }}
+      viewport={{ once: true, amount: 0 }}
       className="h-full flex items-center justify-center relative"
     >
       {/* <motion.img

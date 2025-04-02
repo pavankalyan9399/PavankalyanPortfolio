@@ -44,7 +44,7 @@ const HeroSection = () => {
           variants={fadeIn("up", 0.2)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0 }}
+          viewport={{ once: true, amount: 0 }}
           className="px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg"
         >
           {/* 🚀 Ready to Innovate */}
@@ -54,7 +54,7 @@ const HeroSection = () => {
           variants={fadeIn("left", 0.4)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0 }}
+          viewport={{ once: true, amount: 0 }}
           className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow mb-6"
         >
           PAVAN KALYAN
@@ -64,7 +64,7 @@ const HeroSection = () => {
           variants={fadeIn("right", 0.6)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0 }}
+          viewport={{ once: true, amount: 0 }}
           className="text-2xl text-white"
         >
           {currentSkill}|
@@ -74,7 +74,7 @@ const HeroSection = () => {
           variants={fadeIn("up", 0.8)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0 }}
+          viewport={{ once: true, amount: 0 }}
           className="text-lg text-gray-300"
         >
           Architecting next-generation applications with MERN Stack & Spring Boot, transforming complex challenges into seamless, scalable, and intuitive digital experiences through innovation and precision.
@@ -86,7 +86,7 @@ const HeroSection = () => {
             variants={fadeIn("left", 1)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0 }}
+            viewport={{ once: true, amount: 0 }}
             className="border-2 border-orange rounded-full py-2 px-6 text-lg text-white hover:bg-orange hover:text-white transition-all duration-500"
           >
             <a
@@ -100,7 +100,7 @@ const HeroSection = () => {
             variants={fadeIn("left", 1.2)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0 }}
+            viewport={{ once: true, amount: 0 }}
             className="border-2 border-orange rounded-full py-2 px-6 text-lg text-white hover:bg-orange hover:text-white transition-all duration-500"
           >
                    <Link
@@ -122,7 +122,7 @@ const HeroSection = () => {
             variants={fadeIn("up", 1)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0 }}
+            viewport={{ once: true, amount: 0 }}
           >
             <SingleContactSocial
               link="https://www.linkedin.com/in/durgapavankalyankodi/"
@@ -135,7 +135,7 @@ const HeroSection = () => {
             variants={fadeIn("up", 1.2)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0 }}
+            viewport={{ once: true, amount: 0 }}
           >
             <SingleContactSocial
               link="https://github.com/pavankalyan9399"
@@ -148,7 +148,7 @@ const HeroSection = () => {
             variants={fadeIn("up", 1.4)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0 }}
+            viewport={{ once: true, amount: 0 }}
           >
             <SingleContactSocial
               link="https://www.instagram.com/pavan_kalyan_0fficial/"
@@ -164,7 +164,7 @@ const HeroSection = () => {
         variants={fadeIn("left", 0.4)}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0 }}
+        viewport={{ once: true, amount: 0 }}
         className="w-full md:w-1/2 flex justify-center md:justify-end items-start"
       >
         <img

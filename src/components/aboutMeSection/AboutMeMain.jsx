@@ -10,10 +10,10 @@ const AboutMeMain = () => {
         <div className="flex flex-col md:flex-row gap-12 items-center">
           {/* About Me Text */}
           <motion.div
-            variants={fadeIn("right", 0.2)}
+            variants={fadeIn("right", 0.8)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.7 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="flex-1 text-white"
           >
             <AboutMeText />
@@ -21,10 +21,10 @@ const AboutMeMain = () => {
 
           {/* About Me Image */}
           <motion.div
-            variants={fadeIn("left", 0.2)}
+            variants={fadeIn("left", 0.8)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.7 }}
+            viewport={{ once: true, amount: 0.7 }}
             className="flex-1 flex justify-center"
           >
             <AboutMeImage />
